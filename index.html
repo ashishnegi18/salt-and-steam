@@ -1,191 +1,377 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Salt &amp; Steam — A Weeknight Cooking Journal</title>
-<meta name="description" content="Recipes worth slowing down for. A weeknight cooking journal of bold, simple, global-pantry food.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salt &amp; Steam — A Weeknight Cooking Journal</title>
+    <meta
+      name="description"
+      content="Recipes worth slowing down for. A weeknight cooking journal of bold, simple, global-pantry food."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://edge.consentpixel.com/pixel.js"
+      data-id="9f6c058bca8d995be0e1aecf"
+      async
+      defer
+    ></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-<a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="siteHeader">
+      <div class="header-inner wrap">
+        <a href="#top" class="logo">
+          <span class="logo-mark" aria-hidden="true">
+            <svg
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="20"
+                cy="22"
+                r="13"
+                stroke="currentColor"
+                stroke-width="3"
+              />
+              <path
+                d="M9 22a11 11 0 0 1 22 0"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+              <path
+                d="M14 6c0 3-3 3-3 6M20 4c0 3-3 3-3 6M26 6c0 3-3 3-3 6"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </span>
+          <span class="logo-text">Salt&nbsp;&amp;&nbsp;Steam</span>
+        </a>
 
-<header class="site-header" id="siteHeader">
-  <div class="header-inner wrap">
-    <a href="#top" class="logo">
-      <span class="logo-mark" aria-hidden="true">
-        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="22" r="13" stroke="currentColor" stroke-width="3"/>
-          <path d="M9 22a11 11 0 0 1 22 0" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-          <path d="M14 6c0 3-3 3-3 6M20 4c0 3-3 3-3 6M26 6c0 3-3 3-3 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
-      </span>
-      <span class="logo-text">Salt&nbsp;&amp;&nbsp;Steam</span>
-    </a>
+        <nav class="main-nav" id="mainNav" aria-label="Primary">
+          <a href="#recipes">Recipes</a>
+          <a href="#notebook">Notebook</a>
+          <a href="#picks">Editor&rsquo;s Picks</a>
+          <a href="#subscribe">Subscribe</a>
+        </nav>
 
-    <nav class="main-nav" id="mainNav" aria-label="Primary">
-      <a href="#recipes">Recipes</a>
-      <a href="#notebook">Notebook</a>
-      <a href="#picks">Editor&rsquo;s Picks</a>
-      <a href="#subscribe">Subscribe</a>
-    </nav>
-
-    <div class="header-actions">
-      <button class="saved-toggle" id="savedToggle" type="button" aria-pressed="false">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M12 20.5s-7.5-4.6-10-9.4C0.3 7.7 2.1 4 5.8 4c2 0 3.6 1 4.5 2.6L12 8.6l1.7-2C14.6 5 16.2 4 18.2 4c3.7 0 5.5 3.7 3.8 7.1-2.5 4.8-10 9.4-10 9.4Z" stroke="currentColor" stroke-width="1.8"/>
-        </svg>
-        <span id="savedCount">Saved (0)</span>
-      </button>
-      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<main id="main">
-
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="wrap hero-inner">
-      <div class="hero-copy">
-        <p class="eyebrow">A weeknight cooking journal</p>
-        <h1 class="hero-title">Eat like<br>you mean it.</h1>
-        <p class="hero-sub">Bold, simple food built from a global pantry &mdash; written down the way it actually happens in a real kitchen, mid-week, with one pan and not much patience for fuss.</p>
-        <div class="hero-actions">
-          <a href="#recipes" class="btn btn-primary">Browse the recipes</a>
-          <a href="#notebook" class="btn btn-ghost">Read the notebook</a>
+        <div class="header-actions">
+          <button
+            class="saved-toggle"
+            id="savedToggle"
+            type="button"
+            aria-pressed="false"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 20.5s-7.5-4.6-10-9.4C0.3 7.7 2.1 4 5.8 4c2 0 3.6 1 4.5 2.6L12 8.6l1.7-2C14.6 5 16.2 4 18.2 4c3.7 0 5.5 3.7 3.8 7.1-2.5 4.8-10 9.4-10 9.4Z"
+                stroke="currentColor"
+                stroke-width="1.8"
+              />
+            </svg>
+            <span id="savedCount">Saved (0)</span>
+          </button>
+          <button
+            class="nav-toggle"
+            id="navToggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mainNav"
+            aria-label="Toggle menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </div>
-      <div class="hero-art" aria-hidden="true">
-        <svg viewBox="0 0 320 320" class="skillet-svg">
-          <g class="steam">
-            <path class="steam-line s1" d="M120 90 C110 70, 135 60, 125 40 C118 25, 132 18, 128 5" />
-            <path class="steam-line s2" d="M170 95 C160 75, 185 65, 175 45 C168 30, 182 22, 178 8" />
-            <path class="steam-line s3" d="M220 92 C210 72, 235 62, 225 42 C218 27, 232 20, 228 6" />
-          </g>
-          <ellipse cx="170" cy="190" rx="110" ry="38" fill="none" stroke="var(--ink)" stroke-width="6"/>
-          <path d="M60 190a110 38 0 0 0 220 0" fill="none" stroke="var(--ink)" stroke-width="6"/>
-          <path d="M280 184c20-4 38 2 38 14s-18 16-38 10" fill="none" stroke="var(--ink)" stroke-width="6" stroke-linecap="round"/>
-          <path d="M84 178c30-14 142-14 172 0" fill="none" stroke="var(--tomato)" stroke-width="5" stroke-linecap="round"/>
-        </svg>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- FILTER / SEARCH -->
-  <section class="filter-bar wrap" id="recipes" aria-label="Filter recipes">
-    <div class="chips" id="chipRow" role="group" aria-label="Filter by category"></div>
-    <label class="search-field">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-      <input type="text" id="searchInput" placeholder="Search recipes&hellip;" aria-label="Search recipes">
-    </label>
-  </section>
-
-  <!-- RECIPE GRID -->
-  <section class="wrap">
-    <div class="recipe-grid" id="recipeGrid">
-      <noscript><p class="empty-state">Turn on JavaScript to browse the recipe index.</p></noscript>
-    </div>
-    <p class="empty-state" id="emptyState" hidden>No recipes match that search. Try another ingredient, or clear the filter.</p>
-  </section>
-
-  <!-- NOTEBOOK / ABOUT -->
-  <section class="notebook" id="notebook">
-    <div class="wrap notebook-grid">
-      <div class="notebook-card">
-        <p class="eyebrow eyebrow-dark">From the notebook</p>
-        <h2>Cooking on a Tuesday, not a Sunday.</h2>
-        <p>Most food writing is built for the weekend &mdash; the long simmer, the three-bowl mise en place, the photogenic mess. This notebook is for the other five days: the ones where dinner has to happen between a meeting and a load of laundry.</p>
-        <p>Every recipe here is tested on a weeknight, in a kitchen with exactly enough counter space and never enough hands. Bold flavor, short ingredient lists, and a pan you only have to wash once.</p>
-        <p class="signoff">&mdash; written, tested, and occasionally burnt by one very stubborn home cook.</p>
-      </div>
-      <div class="notebook-stats" aria-hidden="true">
-        <div class="stat-block stat-mustard">
-          <span class="stat-num">15&ndash;40</span>
-          <span class="stat-label">min, most nights</span>
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" id="top">
+        <div class="wrap hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">A weeknight cooking journal</p>
+            <h1 class="hero-title">Eat like<br />you mean it.</h1>
+            <p class="hero-sub">
+              Bold, simple food built from a global pantry &mdash; written down
+              the way it actually happens in a real kitchen, mid-week, with one
+              pan and not much patience for fuss.
+            </p>
+            <div class="hero-actions">
+              <a href="#recipes" class="btn btn-primary">Browse the recipes</a>
+              <a href="#notebook" class="btn btn-ghost">Read the notebook</a>
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <svg viewBox="0 0 320 320" class="skillet-svg">
+              <g class="steam">
+                <path
+                  class="steam-line s1"
+                  d="M120 90 C110 70, 135 60, 125 40 C118 25, 132 18, 128 5"
+                />
+                <path
+                  class="steam-line s2"
+                  d="M170 95 C160 75, 185 65, 175 45 C168 30, 182 22, 178 8"
+                />
+                <path
+                  class="steam-line s3"
+                  d="M220 92 C210 72, 235 62, 225 42 C218 27, 232 20, 228 6"
+                />
+              </g>
+              <ellipse
+                cx="170"
+                cy="190"
+                rx="110"
+                ry="38"
+                fill="none"
+                stroke="var(--ink)"
+                stroke-width="6"
+              />
+              <path
+                d="M60 190a110 38 0 0 0 220 0"
+                fill="none"
+                stroke="var(--ink)"
+                stroke-width="6"
+              />
+              <path
+                d="M280 184c20-4 38 2 38 14s-18 16-38 10"
+                fill="none"
+                stroke="var(--ink)"
+                stroke-width="6"
+                stroke-linecap="round"
+              />
+              <path
+                d="M84 178c30-14 142-14 172 0"
+                fill="none"
+                stroke="var(--tomato)"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
         </div>
-        <div class="stat-block stat-herb">
-          <span class="stat-num">1</span>
-          <span class="stat-label">pan, when possible</span>
+      </section>
+
+      <!-- FILTER / SEARCH -->
+      <section class="filter-bar wrap" id="recipes" aria-label="Filter recipes">
+        <div
+          class="chips"
+          id="chipRow"
+          role="group"
+          aria-label="Filter by category"
+        ></div>
+        <label class="search-field">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="7"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+            <path
+              d="M20 20l-3.5-3.5"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search recipes&hellip;"
+            aria-label="Search recipes"
+          />
+        </label>
+      </section>
+
+      <!-- RECIPE GRID -->
+      <section class="wrap">
+        <div class="recipe-grid" id="recipeGrid">
+          <noscript
+            ><p class="empty-state">
+              Turn on JavaScript to browse the recipe index.
+            </p></noscript
+          >
         </div>
-        <div class="stat-block stat-tomato">
-          <span class="stat-num">0</span>
-          <span class="stat-label">ingredients you can&rsquo;t pronounce</span>
+        <p class="empty-state" id="emptyState" hidden>
+          No recipes match that search. Try another ingredient, or clear the
+          filter.
+        </p>
+      </section>
+
+      <!-- NOTEBOOK / ABOUT -->
+      <section class="notebook" id="notebook">
+        <div class="wrap notebook-grid">
+          <div class="notebook-card">
+            <p class="eyebrow eyebrow-dark">From the notebook</p>
+            <h2>Cooking on a Tuesday, not a Sunday.</h2>
+            <p>
+              Most food writing is built for the weekend &mdash; the long
+              simmer, the three-bowl mise en place, the photogenic mess. This
+              notebook is for the other five days: the ones where dinner has to
+              happen between a meeting and a load of laundry.
+            </p>
+            <p>
+              Every recipe here is tested on a weeknight, in a kitchen with
+              exactly enough counter space and never enough hands. Bold flavor,
+              short ingredient lists, and a pan you only have to wash once.
+            </p>
+            <p class="signoff">
+              &mdash; written, tested, and occasionally burnt by one very
+              stubborn home cook.
+            </p>
+          </div>
+          <div class="notebook-stats" aria-hidden="true">
+            <div class="stat-block stat-mustard">
+              <span class="stat-num">15&ndash;40</span>
+              <span class="stat-label">min, most nights</span>
+            </div>
+            <div class="stat-block stat-herb">
+              <span class="stat-num">1</span>
+              <span class="stat-label">pan, when possible</span>
+            </div>
+            <div class="stat-block stat-tomato">
+              <span class="stat-num">0</span>
+              <span class="stat-label"
+                >ingredients you can&rsquo;t pronounce</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDITOR'S PICKS CAROUSEL -->
+      <section class="picks" id="picks">
+        <div class="wrap picks-head">
+          <div>
+            <p class="eyebrow">Pull from the recipe box</p>
+            <h2>Editor&rsquo;s picks</h2>
+          </div>
+          <div class="picks-arrows">
+            <button
+              id="picksPrev"
+              class="arrow-btn"
+              type="button"
+              aria-label="Scroll left"
+            >
+              &larr;
+            </button>
+            <button
+              id="picksNext"
+              class="arrow-btn"
+              type="button"
+              aria-label="Scroll right"
+            >
+              &rarr;
+            </button>
+          </div>
+        </div>
+        <div class="picks-track" id="picksTrack"></div>
+      </section>
+
+      <!-- NEWSLETTER -->
+      <section class="subscribe" id="subscribe">
+        <div class="wrap subscribe-inner">
+          <div>
+            <h2>One email, one Tuesday.</h2>
+            <p>
+              A single weeknight recipe, sent out before the grocery run. No
+              spam, no twelve-paragraph life stories before the ingredient list.
+            </p>
+          </div>
+          <form id="subscribeForm" class="subscribe-form" novalidate>
+            <label for="subscribeEmail" class="sr-only">Email address</label>
+            <input
+              type="email"
+              id="subscribeEmail"
+              placeholder="you@kitchen.com"
+              required
+            />
+            <button type="submit" class="btn btn-paper">Subscribe</button>
+          </form>
+        </div>
+        <p
+          class="subscribe-note wrap"
+          id="subscribeNote"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div class="footer-brand">
+          <span class="logo-text footer-logo">Salt&nbsp;&amp;&nbsp;Steam</span>
+          <p>
+            A weeknight cooking journal. Bold flavor, short ingredient lists,
+            dinner by seven.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3>Site</h3>
+          <a href="#recipes">Recipes</a>
+          <a href="#notebook">Notebook</a>
+          <a href="#picks">Editor&rsquo;s Picks</a>
+          <a href="#subscribe">Subscribe</a>
+        </div>
+        <div class="footer-col">
+          <h3>Elsewhere</h3>
+          <a href="#">Instagram</a>
+          <a href="#">Pinterest</a>
+          <a href="#">Email the editor</a>
         </div>
       </div>
-    </div>
-  </section>
+      <p class="footer-fine wrap">
+        &copy; <span id="year"></span> Salt &amp; Steam. Made for the
+        Tuesday-night cook.
+      </p>
+    </footer>
 
-  <!-- EDITOR'S PICKS CAROUSEL -->
-  <section class="picks" id="picks">
-    <div class="wrap picks-head">
-      <div>
-        <p class="eyebrow">Pull from the recipe box</p>
-        <h2>Editor&rsquo;s picks</h2>
+    <!-- RECIPE MODAL -->
+    <div class="modal-backdrop" id="modalBackdrop">
+      <div
+        class="modal"
+        id="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <button
+          class="modal-close"
+          id="modalClose"
+          type="button"
+          aria-label="Close recipe"
+        >
+          &times;
+        </button>
+        <div id="modalContent"></div>
       </div>
-      <div class="picks-arrows">
-        <button id="picksPrev" class="arrow-btn" type="button" aria-label="Scroll left">&larr;</button>
-        <button id="picksNext" class="arrow-btn" type="button" aria-label="Scroll right">&rarr;</button>
-      </div>
     </div>
-    <div class="picks-track" id="picksTrack"></div>
-  </section>
 
-  <!-- NEWSLETTER -->
-  <section class="subscribe" id="subscribe">
-    <div class="wrap subscribe-inner">
-      <div>
-        <h2>One email, one Tuesday.</h2>
-        <p>A single weeknight recipe, sent out before the grocery run. No spam, no twelve-paragraph life stories before the ingredient list.</p>
-      </div>
-      <form id="subscribeForm" class="subscribe-form" novalidate>
-        <label for="subscribeEmail" class="sr-only">Email address</label>
-        <input type="email" id="subscribeEmail" placeholder="you@kitchen.com" required>
-        <button type="submit" class="btn btn-paper">Subscribe</button>
-      </form>
-    </div>
-    <p class="subscribe-note wrap" id="subscribeNote" role="status" aria-live="polite"></p>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="wrap footer-grid">
-    <div class="footer-brand">
-      <span class="logo-text footer-logo">Salt&nbsp;&amp;&nbsp;Steam</span>
-      <p>A weeknight cooking journal. Bold flavor, short ingredient lists, dinner by seven.</p>
-    </div>
-    <div class="footer-col">
-      <h3>Site</h3>
-      <a href="#recipes">Recipes</a>
-      <a href="#notebook">Notebook</a>
-      <a href="#picks">Editor&rsquo;s Picks</a>
-      <a href="#subscribe">Subscribe</a>
-    </div>
-    <div class="footer-col">
-      <h3>Elsewhere</h3>
-      <a href="#">Instagram</a>
-      <a href="#">Pinterest</a>
-      <a href="#">Email the editor</a>
-    </div>
-  </div>
-  <p class="footer-fine wrap">&copy; <span id="year"></span> Salt &amp; Steam. Made for the Tuesday-night cook.</p>
-</footer>
-
-<!-- RECIPE MODAL -->
-<div class="modal-backdrop" id="modalBackdrop">
-  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <button class="modal-close" id="modalClose" type="button" aria-label="Close recipe">&times;</button>
-    <div id="modalContent"></div>
-  </div>
-</div>
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
